@@ -1,19 +1,13 @@
-const container = document.querySelector('.container');
-const panels = document.querySelectorAll('.panel');
+const panels = document.querySelectorAll(".panel");
+panels.forEach((panel) => {
+  panel.addEventListener("click", () => {
+    removeActive();
+    panel.classList.add("active");
+  });
+});
 
-container.addEventListener('click', function (e){
-    let clickedPanel = null
-    if (e.target.tagName == 'h2'){
-        clickedPanel = e.target.parentNode;
-    } else {
-        clickedPanel = e.target
-    }
-    removeActivePanel()
-    clickedPanel.classList.add('active')
-})
-
-function removeActivePanel(){
-    panels.forEach(panel=>{
-        panel.classList.remove('active')
-    })
+function removeActive() {
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+  });
 }

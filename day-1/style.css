@@ -31,6 +31,19 @@ body {
     transition: flex 0.7s ease-in;
 }
 
+.panel h2 {
+    position: absolute;
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
 .panel:first-of-type{
     background-position: 50% 30%;
 }
@@ -41,18 +54,6 @@ body {
 
 .panel:nth-of-type(5){
     background-position: 80% 10%;
-}
-
-.panel h2 {
-    position: absolute;
-    font-size: 24px;
-    bottom: 20px;
-    left: 20px;
-    opacity: 0;
-}
-
-.panel.active {
-    flex: 5;
 }
 
 .panel.active h2 {
@@ -78,8 +79,8 @@ body {
         background-position: 65% 10%;
     }
 
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5){
+    .panel:nth-of-type(5),
+    .panel:nth-of-type(6){
         display: none;
     }
 }
